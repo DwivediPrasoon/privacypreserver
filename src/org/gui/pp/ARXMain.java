@@ -3,6 +3,7 @@ package org.gui.pp;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -29,6 +30,7 @@ public class ARXMain extends JFrame{
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
     HashMap<String,HashSet<String>> attributeDomain;
+    Table3Model tm = null;
 
 
     public ARXMain() {
@@ -76,6 +78,29 @@ public class ARXMain extends JFrame{
             }
         });
 
+        list1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        list1.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if(list1.getSelectedValue()!= null) {
+                    if (tm == null) {
+                        tm = new Table3Model(attributeDomain, attributeList[0]);
+                        table3.setModel(tm);
+
+                    }
+                    String changed = (String)list1.getSelectedValue();
+                    tm.updateTable(changed);
+                }
+            }
+        });
+        addColumnButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(tm != null)
+                    tm.addColumn();
+
+            }
+        });
     }
 
 
@@ -115,6 +140,7 @@ public class ARXMain extends JFrame{
         };
 
         list1.setModel(lm);
+        list1.setSelectedIndex(0);
     }
 
     public void createDomainForAttributes(ArrayList<String[]> dataRows){
@@ -193,4 +219,96 @@ class MyModel extends AbstractTableModel {
     public Object getValueAt(int row, int col) {
         return Data.get(row)[col];
     }
+}
+
+class Table3Model extends AbstractTableModel{
+    HashMap<String, HashSet<String>> local;
+    HashMap<String, ArrayList<String[]>> columnWiseData;
+    String currentAttribute;
+    ArrayList<String[]> currentData;
+
+    public Table3Model(HashMap<String, HashSet<String>> local, String currentAttribute){
+        this.local = local;
+        columnWiseData = new HashMap<>();
+        processColumnWiseData(local);
+        currentData = columnWiseData.get(currentAttribute);
+        this.currentAttribute = currentAttribute;
+
+    }
+
+    public void processColumnWiseData(HashMap<String, HashSet<String>> local){
+        Set<String> attributes = local.keySet();
+        Iterator<String> iterator = attributes.iterator();
+        while(iterator.hasNext()){
+            String attribute = iterator.next();
+            HashSet<String> columnValues = local.get(attribute);
+            Iterator<String> iterator1 = columnValues.iterator();
+            ArrayList<String[]> attributeData = new ArrayList<>();
+
+            String[] firstColumn =  new String[columnValues.size()+1];
+            int count = 1;
+            firstColumn[0] = "level 0";
+            while(iterator1.hasNext()){
+                firstColumn[count++] = iterator1.next();
+            }
+            attributeData.add(firstColumn);
+            columnWiseData.put(attribute,attributeData);
+        }
+
+    }
+
+    @Override
+    public int getRowCount() {
+        return currentData.get(0).length-1;
+    }
+
+    @Override
+    public int getColumnCount() {
+        int i = currentData.size();
+        System.out.println(i);
+        return i;
+    }
+
+    @Override
+    public String getColumnName(int columnIndex) {
+        return currentData.get(columnIndex)[0];
+    }
+
+
+
+    @Override
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return true;
+    }
+
+    @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        Object i =  currentData.get(columnIndex)[rowIndex+1];
+        //System.out.println((String)i);
+        return i;
+    }
+
+    @Override
+    public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+        currentData.get(columnIndex)[rowIndex] = (String)aValue;
+    }
+
+    public void updateTable(String attributeSelected){
+        currentAttribute = attributeSelected;
+        currentData = columnWiseData.get(currentAttribute);
+        this.fireTableStructureChanged();
+
+    }
+
+    public void addColumn(){
+        String ColumnName = "level"+getColumnCount();
+        String[] data = new String[currentData.get(0).length];
+        data[0] = ColumnName;
+        for(int i=1; i<data.length; i++)
+            data[i] = "*";
+        currentData.add(data);
+        this.fireTableStructureChanged();
+
+    }
+
 }
