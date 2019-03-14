@@ -3,13 +3,9 @@ package org.gui.pp;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.FocusAdapter;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -26,6 +22,8 @@ public class ARXMain extends JFrame{
     private JList list1;
     private JTable table3;
     private JButton addColumnButton;
+    private JButton browseForACsvButton;
+    private JButton submitButton;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
@@ -40,15 +38,15 @@ public class ARXMain extends JFrame{
         browseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int returnVal = fc.showOpenDialog(tabbedPane1);
+                                int returnVal = fc.showOpenDialog(tabbedPane1);
 
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
-                    File file = fc.getSelectedFile();
-                    //This is where a real application would open the file.
-                    //log.append("Opening: " + file.getName() + "." + newline);
-                    CSVFile Rd = new CSVFile();
-                    ArrayList<String[]> Rs2 = Rd.ReadCSVfile(file);
-                    attributeList = Rs2.get(0);
+                                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                                    File file = fc.getSelectedFile();
+                                    //This is where a real application would open the file.
+                                    //log.append("Opening: " + file.getName() + "." + newline);
+                                    CSVFile Rd = new CSVFile();
+                                    ArrayList<String[]> Rs2 = Rd.ReadCSVfile(file, ",");
+                                    attributeList = Rs2.get(0);
                     Rs2.remove(0);
                     createDomainForAttributes(Rs2);
                     MyModel NewModel = new MyModel(attributeList);
@@ -96,9 +94,21 @@ public class ARXMain extends JFrame{
         addColumnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 if(tm != null)
                     tm.addColumn();
 
+            }
+        });
+        browseForACsvButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int returnVal = fc.showOpenDialog(tabbedPane1);
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    tm.ReadFromCsv(fc.getSelectedFile());
+
+                }
             }
         });
     }
@@ -127,15 +137,24 @@ public class ARXMain extends JFrame{
     }
 
     public void heirarchies(){
+        ArrayList<String> quasiIdentifyingAttributes = new ArrayList<>();
+        Set<String> keys = attributeSensitivity.keySet();
+        Iterator<String> i = keys.iterator();
+        while(i.hasNext()){
+            String attribute = i.next();
+            if(attributeSensitivity.get(attribute).equals("Quasi-Identifying"))
+                quasiIdentifyingAttributes.add(attribute);
+        }
+        System.out.println(quasiIdentifyingAttributes);
         ListModel<String> lm = new AbstractListModel<String>() {
             @Override
             public int getSize() {
-                return attributeList.length;
+                return quasiIdentifyingAttributes.size();
             }
 
             @Override
             public String getElementAt(int index) {
-                return attributeList[index];
+                return quasiIdentifyingAttributes.get(index);
             }
         };
 
@@ -158,6 +177,10 @@ public class ARXMain extends JFrame{
         //System.out.println(attributeDomain.toString());
     }
 
+    public void Anonymize(){
+
+    }
+
 
 }
 
@@ -166,13 +189,13 @@ class CSVFile {
     private final ArrayList<String[]> Rs = new ArrayList<String[]>();
     private String[] OneRow;
 
-    public ArrayList<String[]> ReadCSVfile(File DataFile) {
+    public ArrayList<String[]> ReadCSVfile(File DataFile, String dilimiter) {
         try {
             BufferedReader brd = new BufferedReader(new FileReader(DataFile));
             int count = 0;
             while (brd.ready()) {
                 String st = brd.readLine();
-                OneRow = st.split(",");
+                OneRow = st.split(dilimiter);
                 Rs.add(OneRow);
                 count++;
                 //System.out.println(Arrays.toString(OneRow));
@@ -227,6 +250,7 @@ class Table3Model extends AbstractTableModel{
     String currentAttribute;
     ArrayList<String[]> currentData;
 
+
     public Table3Model(HashMap<String, HashSet<String>> local, String currentAttribute){
         this.local = local;
         columnWiseData = new HashMap<>();
@@ -265,7 +289,7 @@ class Table3Model extends AbstractTableModel{
     @Override
     public int getColumnCount() {
         int i = currentData.size();
-        System.out.println(i);
+        //System.out.println(i);
         return i;
     }
 
@@ -310,5 +334,27 @@ class Table3Model extends AbstractTableModel{
         this.fireTableStructureChanged();
 
     }
+
+    public void ReadFromCsv(File file){
+            CSVFile Rd = new CSVFile();
+            currentData = new ArrayList<>();
+            ArrayList<String[]> data = Rd.ReadCSVfile(file, ";");
+            if (data.get(0).length != 0) {
+                int columnSize = data.get(0).length;
+                int rowSize = data.size();
+                for(int i=0; i< columnSize; i++){
+                    String[] tmp = new String[rowSize+1];
+                    tmp[0] = "level"+i;
+                    for(int j=1; j< rowSize+1; j++){
+                        tmp[j] = data.get(j-1)[i];
+                    }
+                    currentData.add(tmp);
+                }
+                columnWiseData.put(currentAttribute,currentData);
+                this.fireTableStructureChanged();
+            }
+    }
+
+
 
 }

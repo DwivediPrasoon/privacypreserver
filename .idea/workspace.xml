@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9a68e5-0158-44fe-9ce6-512108e5a9c5" name="Default Changelist" comment="Heirarchies version 0.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" afterDir="false" />
     </list>
@@ -17,7 +18,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
+            <state relative-caret-position="1290">
               <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
             </state>
           </provider>
@@ -26,20 +27,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="298" column="41" selection-start-line="298" selection-start-column="41" selection-end-line="298" selection-end-column="41" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3414#3415#0" expanded="true" />
-                <element signature="e#3465#3466#0" expanded="true" />
-                <element signature="e#3548#3549#0" expanded="true" />
-                <element signature="e#3606#3607#0" expanded="true" />
-                <element signature="e#8281#8282#0" expanded="true" />
-                <element signature="e#8329#8330#0" expanded="true" />
-                <element signature="e#6963#6964#0" expanded="true" />
-                <element signature="e#7022#7023#0" expanded="true" />
-                <element signature="e#7296#7297#0" expanded="true" />
-                <element signature="e#7356#7357#0" expanded="true" />
+                <element signature="e#8584#8585#0" expanded="true" />
+                <element signature="e#8634#8635#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,34 +87,15 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1366" />
-    <option name="height" value="677" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PrivacyPreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PrivacyPreserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrivacyPreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
@@ -223,23 +196,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/abc.java" />
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXWelcome.form" />
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXWelcome.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/swing/event/TableModelListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -258,25 +214,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="298" column="41" selection-start-line="298" selection-start-column="41" selection-end-line="298" selection-end-column="41" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3414#3415#0" expanded="true" />
-            <element signature="e#3465#3466#0" expanded="true" />
-            <element signature="e#3548#3549#0" expanded="true" />
-            <element signature="e#3606#3607#0" expanded="true" />
-            <element signature="e#8281#8282#0" expanded="true" />
-            <element signature="e#8329#8330#0" expanded="true" />
-            <element signature="e#6963#6964#0" expanded="true" />
-            <element signature="e#7022#7023#0" expanded="true" />
-            <element signature="e#7296#7297#0" expanded="true" />
-            <element signature="e#7356#7357#0" expanded="true" />
+            <element signature="e#8584#8585#0" expanded="true" />
+            <element signature="e#8634#8635#0" expanded="true" />
           </folding>
         </state>
       </provider>
