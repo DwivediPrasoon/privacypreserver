@@ -1,5 +1,7 @@
 package org.gui.pp;
 
+import org.deidentifier.arx.*;
+
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -9,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.nio.charset.Charset;
 import java.util.*;
 
 public class ARXMain extends JFrame{
@@ -23,12 +26,13 @@ public class ARXMain extends JFrame{
     private JTable table3;
     private JButton addColumnButton;
     private JButton browseForACsvButton;
-    private JButton submitButton;
+    private JButton anonymizeButton;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
     HashMap<String,HashSet<String>> attributeDomain;
     Table3Model tm = null;
+    File source = null;
 
 
     public ARXMain() {
@@ -44,6 +48,7 @@ public class ARXMain extends JFrame{
                                     File file = fc.getSelectedFile();
                                     //This is where a real application would open the file.
                                     //log.append("Opening: " + file.getName() + "." + newline);
+                                    source = file;
                                     CSVFile Rd = new CSVFile();
                                     ArrayList<String[]> Rs2 = Rd.ReadCSVfile(file, ",");
                                     attributeList = Rs2.get(0);
@@ -108,6 +113,21 @@ public class ARXMain extends JFrame{
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     tm.ReadFromCsv(fc.getSelectedFile());
 
+                }
+            }
+        });
+        anonymizeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    if (source != null) {
+                        DataSource datasource = DataSource.createCSVSource(source, Charset.defaultCharset(), ',', true);
+                        Data.create(datasource);
+
+                    }
+                }
+                catch (Exception ex){
+                    ex.printStackTrace();
                 }
             }
         });

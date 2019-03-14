@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9a68e5-0158-44fe-9ce6-512108e5a9c5" name="Default Changelist" comment="Heirarchies version 0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/CSVFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/CSVFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/MyModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/MyModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/Table3Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/Table3Model.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" afterDir="false" />
     </list>
@@ -27,9 +37,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="83">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#8584#8585#0" expanded="true" />
                 <element signature="e#8634#8635#0" expanded="true" />
               </folding>
@@ -86,22 +97,41 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="677" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PrivacyPreserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrivacyPreserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PrivacyPreserver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="319" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -158,10 +188,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1366" height="677" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" weight="0.22734138" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.22734138" />
       <window_info id="Structure" order="1" sideWeight="0.50143266" side_tool="true" weight="0.22583081" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -169,14 +198,14 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.32808024" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" weight="0.32808024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007553" side_tool="true" weight="0.32991454" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32808024" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32649574" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3295129" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -236,9 +265,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="83">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#8584#8585#0" expanded="true" />
             <element signature="e#8634#8635#0" expanded="true" />
           </folding>
@@ -251,10 +281,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>PrivacyPreserver:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
