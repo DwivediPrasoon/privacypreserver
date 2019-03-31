@@ -27,6 +27,7 @@ public class ARXMain extends JFrame{
     private JButton addColumnButton;
     private JButton browseForACsvButton;
     private JButton anonymizeButton;
+    private JComboBox delimiterBox;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
@@ -37,7 +38,7 @@ public class ARXMain extends JFrame{
 
     public ARXMain() {
         add(arxMain);
-        setSize(400,500);
+        setSize(1000,1000);
         fc = new JFileChooser();
         browseButton.addActionListener(new ActionListener() {
             @Override
@@ -50,19 +51,19 @@ public class ARXMain extends JFrame{
                                     //log.append("Opening: " + file.getName() + "." + newline);
                                     source = file;
                                     CSVFile Rd = new CSVFile();
-                                    ArrayList<String[]> Rs2 = Rd.ReadCSVfile(file, ",");
+                                    ArrayList<String[]> Rs2 = Rd.ReadCSVfile(file, delimiterBox.getSelectedItem().toString());
                                     attributeList = Rs2.get(0);
-                    Rs2.remove(0);
-                    createDomainForAttributes(Rs2);
-                    MyModel NewModel = new MyModel(attributeList);
-                    table1.setModel(NewModel);
-                    NewModel.AddCSVData(Rs2);
-                    System.out.println("Rows: " + NewModel.getRowCount());
-                    System.out.println("Cols: " + NewModel.getColumnCount());
-                    populateTable2();
-                } else {
-                    //log.append("Open command cancelled by user." + newline);
-                }
+                                    Rs2.remove(0);
+                                    createDomainForAttributes(Rs2);
+                                    MyModel NewModel = new MyModel(attributeList);
+                                    table1.setModel(NewModel);
+                                    NewModel.AddCSVData(Rs2);
+                                    System.out.println("Rows: " + NewModel.getRowCount());
+                                    System.out.println("Cols: " + NewModel.getColumnCount());
+                                    populateTable2();
+                                } else {
+                                    //log.append("Open command cancelled by user." + newline);
+                                }
 
             }
         });
