@@ -202,7 +202,7 @@
               </splitpane>
             </children>
           </grid>
-          <grid id="13610" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="13610" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Anonymize"/>
@@ -210,166 +210,192 @@
             <properties/>
             <border type="none"/>
             <children>
-              <tabbedpane id="79071" binding="tabbedPane2" default-binding="true">
+              <grid id="47121" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                    <preferred-size width="200" height="200"/>
-                  </grid>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <grid id="dab68" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                    <margin top="0" left="0" bottom="0" right="0"/>
+                  <tabbedpane id="79071" binding="tabbedPane2" default-binding="true">
                     <constraints>
-                      <tabbedpane title="Suppression Rate"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="200" height="200"/>
+                      </grid>
                     </constraints>
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <vspacer id="b90a1">
+                      <grid id="dab68" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
-                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                          <tabbedpane title="Suppression Rate"/>
                         </constraints>
-                      </vspacer>
-                      <component id="e18f5" class="javax.swing.JSlider" binding="suppressionRateSlider">
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <vspacer id="b90a1">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </vspacer>
+                          <component id="e18f5" class="javax.swing.JSlider" binding="suppressionRateSlider">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <majorTickSpacing value="5"/>
+                              <minimum value="0"/>
+                              <minorTickSpacing value="1"/>
+                              <paintLabels value="true"/>
+                              <paintTicks value="true"/>
+                              <snapToTicks value="true"/>
+                              <value value="50"/>
+                              <valueIsAdjusting value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="4f5c" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
-                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                          <tabbedpane title="K Anonimity"/>
                         </constraints>
-                        <properties>
-                          <majorTickSpacing value="5"/>
-                          <minimum value="0"/>
-                          <minorTickSpacing value="1"/>
-                          <paintLabels value="true"/>
-                          <paintTicks value="true"/>
-                          <snapToTicks value="true"/>
-                          <value value="50"/>
-                          <valueIsAdjusting value="true"/>
-                        </properties>
-                      </component>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="cf8c2" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="Select the K from Slider"/>
+                            </properties>
+                          </component>
+                          <vspacer id="e048a">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </vspacer>
+                          <component id="29ad5" class="javax.swing.JSlider" binding="kValueSlider">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <majorTickSpacing value="5"/>
+                              <minorTickSpacing value="1"/>
+                              <paintLabels value="true"/>
+                              <paintTicks value="true"/>
+                              <value value="2"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="afabf" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="L Diversity"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="832c7" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="Select the Algorithm"/>
+                            </properties>
+                          </component>
+                          <vspacer id="234fd">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </vspacer>
+                          <component id="8ceb0" class="javax.swing.JComboBox" binding="chooseLDiversityAlgo">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <model>
+                                <item value="Distinct L Diversity"/>
+                                <item value="Entropy L Diversity"/>
+                                <item value="Recursive L Diversity"/>
+                              </model>
+                            </properties>
+                          </component>
+                          <component id="db942" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="Select L"/>
+                            </properties>
+                          </component>
+                          <component id="c7657" class="javax.swing.JSlider" binding="selectLValue">
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <majorTickSpacing value="1"/>
+                              <maximum value="10"/>
+                              <paintLabels value="true"/>
+                              <paintTicks value="true"/>
+                              <value value="5"/>
+                            </properties>
+                          </component>
+                          <component id="63abf" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="Select C"/>
+                            </properties>
+                          </component>
+                          <component id="8f31e" class="javax.swing.JSlider" binding="selectCValue">
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <majorTickSpacing value="5"/>
+                              <minorTickSpacing value="1"/>
+                              <paintLabels value="true"/>
+                              <paintTicks value="true"/>
+                              <value value="10"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="9caf8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="T Closeness"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
                     </children>
-                  </grid>
-                  <grid id="4f5c" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                    <margin top="0" left="0" bottom="0" right="0"/>
-                    <constraints>
-                      <tabbedpane title="K Anonimity"/>
-                    </constraints>
-                    <properties/>
-                    <border type="none"/>
-                    <children>
-                      <component id="cf8c2" class="javax.swing.JLabel">
-                        <constraints>
-                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Select the K from Slider"/>
-                        </properties>
-                      </component>
-                      <vspacer id="e048a">
-                        <constraints>
-                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
-                      <component id="29ad5" class="javax.swing.JSlider" binding="slider1" default-binding="true">
-                        <constraints>
-                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <majorTickSpacing value="5"/>
-                          <minorTickSpacing value="1"/>
-                          <paintLabels value="true"/>
-                          <paintTicks value="true"/>
-                          <value value="2"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </grid>
-                  <grid id="afabf" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                    <margin top="0" left="0" bottom="0" right="0"/>
-                    <constraints>
-                      <tabbedpane title="L Diversity"/>
-                    </constraints>
-                    <properties/>
-                    <border type="none"/>
-                    <children>
-                      <component id="832c7" class="javax.swing.JLabel">
-                        <constraints>
-                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Select the Algorithm"/>
-                        </properties>
-                      </component>
-                      <vspacer id="234fd">
-                        <constraints>
-                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                      </vspacer>
-                      <component id="8ceb0" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
-                        <constraints>
-                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <model>
-                            <item value="Distinct L Diversity"/>
-                            <item value="Entropy L Diversity"/>
-                            <item value="Recursive L Diversity"/>
-                          </model>
-                        </properties>
-                      </component>
-                      <component id="db942" class="javax.swing.JLabel">
-                        <constraints>
-                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Select L"/>
-                        </properties>
-                      </component>
-                      <component id="c7657" class="javax.swing.JSlider" binding="selectLValue">
-                        <constraints>
-                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <majorTickSpacing value="1"/>
-                          <maximum value="10"/>
-                          <paintLabels value="true"/>
-                          <paintTicks value="true"/>
-                          <value value="5"/>
-                        </properties>
-                      </component>
-                      <component id="63abf" class="javax.swing.JLabel">
-                        <constraints>
-                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <text value="Select C"/>
-                        </properties>
-                      </component>
-                      <component id="8f31e" class="javax.swing.JSlider" binding="selectCValue">
-                        <constraints>
-                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                        </constraints>
-                        <properties>
-                          <majorTickSpacing value="5"/>
-                          <minorTickSpacing value="1"/>
-                          <paintLabels value="true"/>
-                          <paintTicks value="true"/>
-                          <value value="10"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </grid>
-                  <grid id="9caf8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                    <margin top="0" left="0" bottom="0" right="0"/>
-                    <constraints>
-                      <tabbedpane title="T Closeness"/>
-                    </constraints>
-                    <properties/>
-                    <border type="none"/>
-                    <children/>
-                  </grid>
+                  </tabbedpane>
                 </children>
-              </tabbedpane>
+              </grid>
+              <component id="ef312" class="javax.swing.JButton" binding="addToConfigurationButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Add to configuration"/>
+                </properties>
+              </component>
+              <component id="c79b" class="javax.swing.JButton" binding="anonymizeButton1" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Anonymize"/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>

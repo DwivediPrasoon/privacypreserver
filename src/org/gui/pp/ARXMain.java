@@ -30,13 +30,16 @@ public class ARXMain extends JFrame{
     private JComboBox delimiterBox;
     private JTabbedPane tabbedPane2;
     private JSlider suppressionRateSlider;
-    private JSlider slider1;
-    private JComboBox comboBox1;
+    private JSlider kValueSlider;
+    private JComboBox chooseLDiversityAlgo;
     private JSlider selectLValue;
     private JSlider selectCValue;
+    private JButton addToConfigurationButton;
+    private JButton anonymizeButton1;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
+    HashMap<String,String> attributeType;
     HashMap<String,HashSet<String>> attributeDomain;
     Table3Model tm = null;
     File source = null;
@@ -79,9 +82,11 @@ public class ARXMain extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 attributeSensitivity =  new HashMap<>();
+                attributeType = new HashMap<>();
                 TableModel mod = table2.getModel();
                 for(int i=0; i< table2.getRowCount(); i++){
                     attributeSensitivity.put(attributeList[i], (String) mod.getValueAt(i,1));
+                    attributeType.put(attributeList[i],(String)mod.getValueAt(i,2));
                 }
                 tabbedPane1.setSelectedIndex(2);
                 heirarchies();
@@ -142,17 +147,22 @@ public class ARXMain extends JFrame{
 
 
     public void populateTable2(){
-        JComboBox cellValues;
+        JComboBox cellValues, dataType;
         String[] identifiers = {"Identifier", "Sensitive", "Quasi-Identifying", "Insensitive"};
+        String[] dataTypes = {"Integer", "Decimal", "String", "NULL", "Date"};
         cellValues = new JComboBox(identifiers);
+        dataType = new JComboBox(dataTypes);
         DefaultTableModel mod = new DefaultTableModel();
-        mod.addColumn("Type");
-        mod.addColumn("Attribute");
+        mod.addColumn("Attribute Name");
+        mod.addColumn("Privacy Type");
+        mod.addColumn("Data Type");
         table2.setModel(mod);
-        TableColumn tc = table2.getColumn("Attribute");
+        TableColumn tc = table2.getColumn("Privacy Type");
          tc.setCellEditor(new DefaultCellEditor(cellValues));
+        TableColumn tc1 = table2.getColumn("Data Type");
+        tc1.setCellEditor(new DefaultCellEditor(dataType));
         for(String x: attributeList) {
-            mod.addRow(new Object[]{x,"Sensitive"});
+            mod.addRow(new Object[]{x,"Insensitive", "String"});
         }
 
         DefaultTableCellRenderer renderer =
@@ -204,7 +214,34 @@ public class ARXMain extends JFrame{
         //System.out.println(attributeDomain.toString());
     }
 
-    public void Anonymize(){
+    public void prepareAnonymizer(){
+        try {
+            DataSource dataSource = (DataSource) DataSource.createCSVSource(source, Charset.defaultCharset(), delimiterBox.getSelectedItem().toString().charAt(0), true);
+
+            //Adding columns
+            for(String x: attributeType.keySet()){
+                String type = attributeType.get(x);
+                switch(type) {
+                    case "String": dataSource.addColumn(x, DataType.STRING);
+                                    break;
+                    case "Integer": dataSource.addColumn(x, DataType.INTEGER);
+                                    break;
+                    case "NULL" : dataSource.addColumn(x, DataType.NULL_VALUE);
+                                    break;
+                    case "Decimal": dataSource.addColumn(x, DataType.DECIMAL);
+                                    break;
+                    case "Date": dataSource.addColumn(x, DataType.DATE);
+                                    break;
+                }
+            }
+            Data data = Data.create(dataSource);
+
+            
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
