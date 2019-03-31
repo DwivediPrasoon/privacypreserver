@@ -28,6 +28,12 @@ public class ARXMain extends JFrame{
     private JButton browseForACsvButton;
     private JButton anonymizeButton;
     private JComboBox delimiterBox;
+    private JTabbedPane tabbedPane2;
+    private JSlider suppressionRateSlider;
+    private JSlider slider1;
+    private JComboBox comboBox1;
+    private JSlider selectLValue;
+    private JSlider selectCValue;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
@@ -209,7 +215,6 @@ public class ARXMain extends JFrame{
 class CSVFile {
     private final ArrayList<String[]> Rs = new ArrayList<String[]>();
     private String[] OneRow;
-
     public ArrayList<String[]> ReadCSVfile(File DataFile, String dilimiter) {
         try {
             BufferedReader brd = new BufferedReader(new FileReader(DataFile));

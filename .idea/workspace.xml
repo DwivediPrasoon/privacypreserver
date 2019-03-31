@@ -4,7 +4,6 @@
     <list default="true" id="ac9a68e5-0158-44fe-9ce6-512108e5a9c5" name="Default Changelist" comment="Heirarchies version 0.1">
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+            <state relative-caret-position="126">
+              <caret line="216" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="216" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -79,9 +78,9 @@
         <option value="$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/test.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/abc.form" />
-        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
       </list>
     </option>
   </component>
@@ -221,14 +220,14 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.3252149" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" weight="0.23782235" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007553" side_tool="true" weight="0.32991454" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32649574" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3252149" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3295129" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -276,9 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -288,13 +284,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        <state relative-caret-position="126">
+          <caret line="216" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="216" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
