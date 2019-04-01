@@ -14,19 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
+            <state relative-caret-position="225">
+              <caret line="362" lean-forward="true" selection-start-line="362" selection-end-line="362" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#8277#8278#0" expanded="true" />
+                <element signature="e#8339#8340#0" expanded="true" />
+                <element signature="e#8496#8497#0" expanded="true" />
+                <element signature="e#8540#8541#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -70,8 +74,8 @@
         <option value="$PROJECT_DIR$/src/org/gui/pp/test.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/abc.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" />
-        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
       </list>
     </option>
   </component>
@@ -85,50 +89,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="pp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
@@ -203,14 +164,14 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" weight="0.2837607" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.15897436" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007553" side_tool="true" weight="0.32991454" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3252149" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32478634" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3295129" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -248,6 +209,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -258,25 +226,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="225">
+          <caret line="362" lean-forward="true" selection-start-line="362" selection-end-line="362" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8277#8278#0" expanded="true" />
+            <element signature="e#8339#8340#0" expanded="true" />
+            <element signature="e#8496#8497#0" expanded="true" />
+            <element signature="e#8540#8541#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="238" column="12" selection-start-line="238" selection-start-column="12" selection-end-line="238" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
   <component name="masterDetails">

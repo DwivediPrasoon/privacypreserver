@@ -1,6 +1,10 @@
 package org.gui.pp;
 
 import org.deidentifier.arx.*;
+import org.deidentifier.arx.criteria.DistinctLDiversity;
+import org.deidentifier.arx.criteria.EntropyLDiversity;
+import org.deidentifier.arx.criteria.KAnonymity;
+import org.deidentifier.arx.criteria.RecursiveCLDiversity;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -26,7 +30,7 @@ public class ARXMain extends JFrame{
     private JTable table3;
     private JButton addColumnButton;
     private JButton browseForACsvButton;
-    private JButton anonymizeButton;
+    private JButton goToConfigurationButton;
     private JComboBox delimiterBox;
     private JTabbedPane tabbedPane2;
     private JSlider suppressionRateSlider;
@@ -35,14 +39,25 @@ public class ARXMain extends JFrame{
     private JSlider selectLValue;
     private JSlider selectCValue;
     private JButton addToConfigurationButton;
-    private JButton anonymizeButton1;
+    private JButton goToAnonymizerButton;
+    private JComboBox selectSensitiveAttribute;
+    private JSlider maxSnapshotSizeDataset;
+    private JSlider maxSnapshotSizeSnapshot;
+    private JSlider selectHistorySize;
+    private JButton anonymizeButton;
+    private JTextField minimumInfoLoss;
+    private JTextField maxInfoLoss;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
     HashMap<String,String> attributeType;
     HashMap<String,HashSet<String>> attributeDomain;
+    HashMap<String, ArrayList<String[]>> attributeHeirarchyMap;
     Table3Model tm = null;
     File source = null;
+    ARXConfiguration config;
+    ARXResult result;
+    Data data;
 
 
     public ARXMain() {
@@ -128,14 +143,14 @@ public class ARXMain extends JFrame{
                 }
             }
         });
-        anonymizeButton.addActionListener(new ActionListener() {
+        goToConfigurationButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (source != null) {
-                        DataSource datasource = DataSource.createCSVSource(source, Charset.defaultCharset(), ',', true);
-                        Data.create(datasource);
-
+                        convertToRowWiseHierarchy(tm.columnWiseData);
+                        prepareAnonymizer();
+                        initializeSensitiveJComboBox();
                     }
                 }
                 catch (Exception ex){
@@ -143,12 +158,55 @@ public class ARXMain extends JFrame{
                 }
             }
         });
+        addToConfigurationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(config == null)
+                    config = ARXConfiguration.create();
+                if(tabbedPane2.getSelectedIndex() == 0){
+                    config.setSuppressionLimit(suppressionRateSlider.getValue()/100d);
+                }
+                else if(tabbedPane2.getSelectedIndex() == 1){
+                    config.addPrivacyModel(new KAnonymity(kValueSlider.getValue()));
+                }
+                else if(tabbedPane2.getSelectedIndex() == 2 && selectSensitiveAttribute.getSelectedItem()!=null){
+                    String algo = chooseLDiversityAlgo.getSelectedItem().toString();
+                    switch (algo){
+                        case "Distinct L Diversity": config.addPrivacyModel(new DistinctLDiversity(selectSensitiveAttribute.getSelectedItem().toString(),
+                                selectLValue.getValue()));
+                                selectSensitiveAttribute.removeItemAt(selectSensitiveAttribute.getSelectedIndex());
+                                break;
+                        case "Entropy L Diversity": config.addPrivacyModel(new EntropyLDiversity(selectSensitiveAttribute.getSelectedItem().toString(),
+                                selectLValue.getValue()));
+                            selectSensitiveAttribute.removeItemAt(selectSensitiveAttribute.getSelectedIndex());
+                            break;
+                        case "Recursive L Diversity": config.addPrivacyModel(new RecursiveCLDiversity(selectSensitiveAttribute.getSelectedItem().toString(),
+                                selectCValue.getValue()/100d,
+                                selectLValue.getValue()));
+                            selectSensitiveAttribute.removeItemAt(selectSensitiveAttribute.getSelectedIndex());
+                            break;
+                    }
+                }
+            }
+        });
+        goToAnonymizerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabbedPane1.setSelectedIndex(4);
+            }
+        });
+        anonymizeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                anonymizer();
+            }
+        });
     }
 
 
     public void populateTable2(){
         JComboBox cellValues, dataType;
-        String[] identifiers = {"Identifier", "Sensitive", "Quasi-Identifying", "Insensitive"};
+        String[] identifiers = {"Identifying", "Sensitive", "Quasi-Identifying", "Insensitive"};
         String[] dataTypes = {"Integer", "Decimal", "String", "NULL", "Date"};
         cellValues = new JComboBox(identifiers);
         dataType = new JComboBox(dataTypes);
@@ -172,6 +230,16 @@ public class ARXMain extends JFrame{
 
 
     }
+
+    public void initializeSensitiveJComboBox(){
+        ArrayList<String> sensitiveAttibutes = new ArrayList<>();
+        for(String attribute: attributeSensitivity.keySet()){
+            if(attributeSensitivity.get(attribute).equals("Sensitive"))
+                sensitiveAttibutes.add(attribute);
+        }
+        selectSensitiveAttribute.setModel(new DefaultComboBoxModel(sensitiveAttibutes.toArray()));
+    }
+
 
     public void heirarchies(){
         ArrayList<String> quasiIdentifyingAttributes = new ArrayList<>();
@@ -198,6 +266,23 @@ public class ARXMain extends JFrame{
         list1.setModel(lm);
         list1.setSelectedIndex(0);
     }
+
+    //Function to convert columnWiseData for Attribute's heirarchy to rowWiseData
+    public void convertToRowWiseHierarchy(HashMap<String, ArrayList<String[]>> columnWiseData){
+        attributeHeirarchyMap = new HashMap<>();
+        for(String attribute: columnWiseData.keySet()){
+            ArrayList<String[]> tableColumnWise = columnWiseData.get(attribute);
+            ArrayList<String[]> tableRowWise = new ArrayList<>();
+            for(int rowNumber=0; rowNumber<tableColumnWise.get(0).length; rowNumber++) {
+                String[] row = new String[tableColumnWise.size()];
+                for(int columnNumber=0; columnNumber<tableColumnWise.size(); columnNumber++)
+                    row[columnNumber] = tableColumnWise.get(columnNumber)[rowNumber];
+                tableRowWise.add(row);
+            }
+            attributeHeirarchyMap.put(attribute,tableRowWise);
+        }
+    }
+
 
     public void createDomainForAttributes(ArrayList<String[]> dataRows){
         attributeDomain = new HashMap<>();
@@ -234,9 +319,32 @@ public class ARXMain extends JFrame{
                                     break;
                 }
             }
-            Data data = Data.create(dataSource);
 
-            
+            //creating data sources
+            data = Data.create(dataSource);
+
+            //defining sensitivity of the attributes
+            //{"Identifying", "Sensitive", "Quasi-Identifying", "Insensitive"}
+            for(String x: attributeSensitivity.keySet()){
+                String s = attributeSensitivity.get(x);
+                switch (s){
+                    case "Identifying" : data.getDefinition().setAttributeType(x, AttributeType.IDENTIFYING_ATTRIBUTE);
+                                        break;
+                    case "Sensitive": data.getDefinition().setAttributeType(x, AttributeType.SENSITIVE_ATTRIBUTE);
+                                        break;
+                    case "Quasi-Identifying" : data.getDefinition().setAttributeType(x, AttributeType.QUASI_IDENTIFYING_ATTRIBUTE);
+                                                break;
+                    case "Insensitive": data.getDefinition().setAttributeType(x, AttributeType.INSENSITIVE_ATTRIBUTE);
+                                        break;
+                }
+            }
+
+            //Making Heirarchies
+            for(String attibute: attributeHeirarchyMap.keySet()){
+                AttributeType.Hierarchy hierarchy = AttributeType.Hierarchy.create(attributeHeirarchyMap.get(attibute).iterator());
+                data.getDefinition().setHierarchy(attibute,hierarchy);
+            }
+
 
         }
         catch (Exception e){
@@ -244,6 +352,24 @@ public class ARXMain extends JFrame{
         }
 
     }
+
+    public void anonymizer(){
+        try {
+            ARXAnonymizer anonymizer = new ARXAnonymizer();
+            anonymizer.setHistorySize(selectHistorySize.getValue());
+            anonymizer.setMaximumSnapshotSizeDataset(maxSnapshotSizeDataset.getValue() / 100d);
+            anonymizer.setMaximumSnapshotSizeSnapshot(maxSnapshotSizeSnapshot.getValue() / 100d);
+            result = anonymizer.anonymize(data, config);
+
+            if (result.isResultAvailable())
+                System.out.println("Yes");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 }
