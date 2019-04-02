@@ -45,8 +45,13 @@ public class ARXMain extends JFrame{
     private JSlider maxSnapshotSizeSnapshot;
     private JSlider selectHistorySize;
     private JButton anonymizeButton;
-    private JTextField minimumInfoLoss;
-    private JTextField maxInfoLoss;
+    private JTable oldTable;
+    private JTable resultTable;
+    private JTextField minInfoLossScore;
+    private JTextField maxInfoLossScore;
+    private JButton exportToCSVButton;
+    private JButton retryWithSomeOtherButton;
+    private JButton goToExportDataButton;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
@@ -58,6 +63,7 @@ public class ARXMain extends JFrame{
     ARXConfiguration config;
     ARXResult result;
     Data data;
+    ARXAnonymizer anonymizer;
 
 
     public ARXMain() {
@@ -151,6 +157,7 @@ public class ARXMain extends JFrame{
                         convertToRowWiseHierarchy(tm.columnWiseData);
                         prepareAnonymizer();
                         initializeSensitiveJComboBox();
+                        tabbedPane1.setSelectedIndex(3);
                     }
                 }
                 catch (Exception ex){
@@ -199,6 +206,20 @@ public class ARXMain extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 anonymizer();
+            }
+        });
+        retryWithSomeOtherButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                anonymizer = null;
+                config = null;
+                tabbedPane1.setSelectedIndex(1);
+            }
+        });
+        goToExportDataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tabbedPane1.setSelectedIndex(6);
             }
         });
     }
@@ -355,19 +376,48 @@ public class ARXMain extends JFrame{
 
     public void anonymizer(){
         try {
-            ARXAnonymizer anonymizer = new ARXAnonymizer();
+            anonymizer = new ARXAnonymizer();
             anonymizer.setHistorySize(selectHistorySize.getValue());
             anonymizer.setMaximumSnapshotSizeDataset(maxSnapshotSizeDataset.getValue() / 100d);
             anonymizer.setMaximumSnapshotSizeSnapshot(maxSnapshotSizeSnapshot.getValue() / 100d);
             result = anonymizer.anonymize(data, config);
 
-            if (result.isResultAvailable())
-                System.out.println("Yes");
+            if (result.isResultAvailable()) {
+                initializeResultTables();
+                tabbedPane1.setSelectedIndex(5);
+            }
         }
         catch (Exception e){
             e.printStackTrace();
         }
 
+    }
+
+
+    public void initializeResultTables(){
+        oldTable.setModel(table1.getModel());
+        resultTable.setModel(new AbstractTableModel() {
+            DataHandle handle = result.getOutput();
+            @Override
+            public int getRowCount() {
+                return handle.getNumRows();
+            }
+
+            @Override
+            public int getColumnCount() {
+                return handle.getNumColumns();
+            }
+
+            @Override
+            public Object getValueAt(int rowIndex, int columnIndex) {
+                return handle.getValue(rowIndex, columnIndex);
+            }
+
+            @Override
+            public String getColumnName(int columnIndex){
+                return handle.getAttributeName(columnIndex);
+            }
+        });
     }
 
 
