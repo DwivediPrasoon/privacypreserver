@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9a68e5-0158-44fe-9ce6-512108e5a9c5" name="Default Changelist" comment="Heirarchies version 0.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" afterDir="false" />
     </list>
@@ -15,15 +14,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="221" column="46" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
+            <state relative-caret-position="354">
+              <caret line="460" column="31" selection-start-line="460" selection-start-column="31" selection-end-line="460" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#9394#9395#0" expanded="true" />
                 <element signature="e#9456#9457#0" expanded="true" />
+                <element signature="e#9600#10267#0" expanded="true" />
+                <element signature="e#10266#10267#0" expanded="true" />
                 <element signature="e#16058#16059#0" expanded="true" />
                 <element signature="e#16103#16104#0" expanded="true" />
                 <element signature="e#16181#16182#0" expanded="true" />
@@ -37,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -45,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="6">
               <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,8 +82,8 @@
         <option value="$PROJECT_DIR$/src/org/gui/pp/test.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/abc.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" />
-        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
       </list>
     </option>
   </component>
@@ -171,7 +172,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.1504298" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.38252148" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -225,7 +226,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="6">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -233,17 +234,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="221" column="46" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
+        <state relative-caret-position="354">
+          <caret line="460" column="31" selection-start-line="460" selection-start-column="31" selection-end-line="460" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#9394#9395#0" expanded="true" />
             <element signature="e#9456#9457#0" expanded="true" />
+            <element signature="e#9600#10267#0" expanded="true" />
+            <element signature="e#10266#10267#0" expanded="true" />
             <element signature="e#16058#16059#0" expanded="true" />
             <element signature="e#16103#16104#0" expanded="true" />
             <element signature="e#16181#16182#0" expanded="true" />
@@ -255,6 +255,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">

@@ -10,6 +10,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -87,6 +88,7 @@ public class ARXMain extends JFrame{
                                     createDomainForAttributes(Rs2);
                                     MyModel NewModel = new MyModel(attributeList);
                                     table1.setModel(NewModel);
+
                                     NewModel.AddCSVData(Rs2);
                                     System.out.println("Rows: " + NewModel.getRowCount());
                                     System.out.println("Cols: " + NewModel.getColumnCount());
@@ -223,6 +225,41 @@ public class ARXMain extends JFrame{
             }
         });
     }
+
+    public void setColumnColor(JTable table){
+        table.setDefaultRenderer(table.getColumnClass(0), new DefaultTableCellRenderer(){
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                                                           boolean isSelected, boolean hasFocus, int row, int column) {
+
+                Component rendererComp = super.getTableCellRendererComponent(table, value, isSelected, hasFocus,
+                        row, column);
+
+                String name = table.getColumnName(column);
+                String sensitivity = attributeSensitivity.get(name);
+                switch (sensitivity){
+                    case "Identifying": rendererComp.setForeground(Color.red);
+                                        rendererComp .setBackground(Color.white);
+                                        break;
+                    case "Sensitive" : rendererComp.setForeground(Color.green);
+                                        rendererComp .setBackground(Color.white);
+                                        break;
+                    case "Insensitive" :rendererComp.setForeground(Color.blue);
+                                        rendererComp .setBackground(Color.white);
+                                        break;
+                    case "Quasi-Identifying" :rendererComp.setForeground(Color.black);
+                                        rendererComp .setBackground(Color.white);
+                                        break;
+                }
+
+
+
+                return rendererComp ;
+            }
+        });
+
+    }
+
 
 
     public void populateTable2(){
@@ -396,6 +433,8 @@ public class ARXMain extends JFrame{
 
     public void initializeResultTables(){
         oldTable.setModel(table1.getModel());
+        setColumnColor(oldTable);
+        oldTable.updateUI();
         resultTable.setModel(new AbstractTableModel() {
             DataHandle handle = result.getOutput();
             @Override
@@ -418,6 +457,8 @@ public class ARXMain extends JFrame{
                 return handle.getAttributeName(columnIndex);
             }
         });
+        setColumnColor(resultTable);
+        resultTable.updateUI();
     }
 
 
