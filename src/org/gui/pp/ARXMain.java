@@ -222,6 +222,7 @@ public class ARXMain extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 tabbedPane1.setSelectedIndex(6);
+                initialsizeExportData();
             }
         });
     }
@@ -251,16 +252,17 @@ public class ARXMain extends JFrame{
                                         rendererComp .setBackground(Color.white);
                                         break;
                 }
-
-
-
                 return rendererComp ;
             }
         });
 
     }
 
-
+    public void initialsizeExportData(){
+        ARXLattice.ARXNode node = result.getGlobalOptimum();
+        minInfoLossScore.setText(node.getLowestScore().toString());
+        maxInfoLossScore.setText(node.getHighestScore().toString());
+    }
 
     public void populateTable2(){
         JComboBox cellValues, dataType;

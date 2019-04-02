@@ -17,12 +17,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="460" column="31" selection-start-line="460" selection-start-column="31" selection-end-line="460" selection-end-column="31" />
+            <state relative-caret-position="152">
+              <caret line="263" column="68" selection-start-line="263" selection-start-column="68" selection-end-line="263" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#9394#9395#0" expanded="true" />
-                <element signature="e#9456#9457#0" expanded="true" />
                 <element signature="e#9600#10267#0" expanded="true" />
                 <element signature="e#10266#10267#0" expanded="true" />
                 <element signature="e#16058#16059#0" expanded="true" />
@@ -41,18 +39,6 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
           <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -224,24 +210,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="460" column="31" selection-start-line="460" selection-start-column="31" selection-end-line="460" selection-end-column="31" />
+        <state relative-caret-position="152">
+          <caret line="263" column="68" selection-start-line="263" selection-start-column="68" selection-end-line="263" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#9394#9395#0" expanded="true" />
-            <element signature="e#9456#9457#0" expanded="true" />
             <element signature="e#9600#10267#0" expanded="true" />
             <element signature="e#10266#10267#0" expanded="true" />
             <element signature="e#16058#16059#0" expanded="true" />
@@ -252,6 +226,16 @@
             <element signature="e#16390#16391#0" expanded="true" />
             <element signature="e#16569#16570#0" expanded="true" />
             <element signature="e#16644#16645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
