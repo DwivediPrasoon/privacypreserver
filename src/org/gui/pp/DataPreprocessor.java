@@ -1,6 +1,7 @@
 package org.gui.pp;
 
-import weka.gui.explorer.*;
+
+import weka.gui.explorer.Explorer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -38,9 +39,23 @@ public class DataPreprocessor extends JFrame {
 		
 		java.util.Vector<Explorer.ExplorerPanel> list = explorer.getPanels();
 		System.out.println(list.toString());
-		
-		ClassifierPanel cp = (ClassifierPanel) explorer.getPanels().get(0);
-		
+
+
+//		Thread t = new Thread(){
+//			public void run(){
+//					ClassifierPanel cp = null;
+//					while(cp==null)
+//						cp = (ClassifierPanel) list.get(0);
+//					while(cp!=null) {
+//						System.out.println(cp.getClassifier().getCapabilities());
+//					}
+//			}
+//		};
+//
+//		t.start();
+
+
+
 		
 	}
 	
