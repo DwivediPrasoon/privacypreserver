@@ -4,7 +4,12 @@ import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import weka.classifiers.AbstractClassifier;
+import weka.classifiers.Classifier;
 import weka.gui.explorer.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class wekaWindow extends JFrame {
 
@@ -36,6 +41,24 @@ public class wekaWindow extends JFrame {
             }
         });
 
+        addModel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                addModelToList(explorerTabs);
+            }
+        });
     }
+
+    public void addModelToList(JTabbedPane explorerTab){
+        System.out.println(explorerTab.getSelectedComponent().getClass().toString());
+        if(explorerTab.getSelectedComponent().getClass().equals(new weka.gui.explorer.ClassifierPanel().getClass())){
+            ClassifierPanel c = (ClassifierPanel) explorerTab.getSelectedComponent();
+            AbstractClassifier cp = (AbstractClassifier) c.getClassifier();
+            System.out.println(cp.getCapabilities());
+            for(String x: cp.getOptions())
+                System.out.println(x);
+        }
+    }
+
 
 }
