@@ -1,6 +1,10 @@
 package org.gui.pp;
 
 
+import sun.awt.AWTIcon32_java_icon16_png;
+import weka.classifiers.Classifier;
+import weka.gui.ResultHistoryPanel;
+import weka.gui.explorer.ClassifierPanel;
 import weka.gui.explorer.Explorer;
 
 import javax.swing.*;
@@ -37,22 +41,36 @@ public class DataPreprocessor extends JFrame {
 		btnNewButton.setHorizontalAlignment(SwingConstants.RIGHT);
 		panel.add(btnNewButton);
 		
-		java.util.Vector<Explorer.ExplorerPanel> list = explorer.getPanels();
-		System.out.println(list.toString());
+		JTabbedPane tp = explorer.getTabbedPane();
+		//ClassifierPanel classify = (ClassifierPanel) tp.getComponentAt(1);
+		//ResultHistoryPanel rs = classify.getResultHistory();
 
 
-//		Thread t = new Thread(){
-//			public void run(){
-//					ClassifierPanel cp = null;
-//					while(cp==null)
-//						cp = (ClassifierPanel) list.get(0);
-//					while(cp!=null) {
-//						System.out.println(cp.getClassifier().getCapabilities());
-//					}
-//			}
-//		};
-//
-//		t.start();
+		Thread t = new Thread(){
+			public void run(){
+					ClassifierPanel cp = null;
+					ResultHistoryPanel rs = null;
+					while(cp==null)
+						cp = (ClassifierPanel) (ClassifierPanel) tp.getComponentAt(1);
+					while(cp!=null && rs==null)
+						rs = cp.getResultHistory();
+					JList js = null;
+					while(js==null)
+						js = rs.getList();
+					DefaultListModel dm = null;
+					while(dm == null)
+					dm = (DefaultListModel) js.getModel();
+					while(dm.isEmpty());
+					System.out.println(dm.getElementAt(0).toString());
+					System.out.println(rs.getNamedBuffer(dm.getElementAt(0).toString()));
+
+
+
+
+			}
+		};
+
+		t.start();
 
 
 

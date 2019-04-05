@@ -45,7 +45,7 @@ public class WelcomeScreen extends JFrame {
 		JButton btnClickHereTo_1 = new JButton("Click here");
 		btnClickHereTo_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new DataPreprocessor().setVisible(true);
+				new wekaWindow().setVisible(true);
 				
 			}
 		});

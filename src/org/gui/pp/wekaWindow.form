@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.gui.pp.wekaWindow">
+  <grid id="27dc6" binding="root" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="500"/>
+    </constraints>
+    <properties>
+      <minimumSize width="500" height="500"/>
+      <preferredSize width="500" height="500"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="8f422" class="javax.swing.JLabel">
+        <constraints border-constraint="North"/>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <text value="Choose your Analytics Model"/>
+        </properties>
+      </component>
+      <grid id="cabaa" binding="wekaExplorer" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <component id="6f805" class="javax.swing.JButton" binding="addModel">
+        <constraints border-constraint="South"/>
+        <properties>
+          <enabled value="false"/>
+          <text value="Add currently selected model to centralized List"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
