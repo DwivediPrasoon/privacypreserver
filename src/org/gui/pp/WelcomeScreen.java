@@ -11,18 +11,21 @@ import java.awt.event.ActionListener;
 public class WelcomeScreen extends JFrame {
 
 	private JPanel contentPane;
+	JFrame arxWindow;
+	JFrame wekaWindow;
 
 	/**
 	 * Launch the application.
 	 */
-	
+	JFrame rootFrame;
 
 	/**
 	 * Create the frame.
 	 */
 	public WelcomeScreen() {
+		rootFrame = this;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1000, 1000);
+		setSize(1000, 1000);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -45,7 +48,10 @@ public class WelcomeScreen extends JFrame {
 		JButton btnClickHereTo_1 = new JButton("Click here");
 		btnClickHereTo_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new wekaWindow().setVisible(true);
+				if(wekaWindow == null)
+					wekaWindow = new wekaWindow();
+					wekaWindow.setVisible(true);
+
 				
 			}
 		});
@@ -83,7 +89,9 @@ public class WelcomeScreen extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				new ARXMain().setVisible(true);;
+				if(arxWindow == null)
+					arxWindow = new ARXMain();
+					arxWindow.setVisible(true);
 			}
 		});
 		

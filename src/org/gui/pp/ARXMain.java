@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.nio.charset.Charset;
 import java.util.*;
 
@@ -53,7 +54,7 @@ public class ARXMain extends JFrame{
     private JButton exportToCSVButton;
     private JButton retryWithSomeOtherButton;
     private JButton goToExportDataButton;
-    JFileChooser fc;
+                    JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
     HashMap<String,String> attributeType;
@@ -68,6 +69,7 @@ public class ARXMain extends JFrame{
 
 
     public ARXMain() {
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         add(arxMain);
         setSize(1000,1000);
         fc = new JFileChooser();
@@ -225,6 +227,12 @@ public class ARXMain extends JFrame{
                 initialsizeExportData();
             }
         });
+        exportToCSVButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                exportDataToCSV();
+            }
+        });
     }
 
     public void setColumnColor(JTable table){
@@ -257,6 +265,32 @@ public class ARXMain extends JFrame{
         });
 
     }
+
+    public void exportDataToCSV(){
+        try {
+            System.out.println(source.getName());
+            File newFile = new File("/Users/iiitb/Documents/privacypreserver/Data/"+source.getName());
+            DataHandle handle = result.getOutput();
+            FileWriter fw = new FileWriter(newFile);
+            int att;
+            for(att=0; att<handle.getNumColumns()-1; att++){
+                fw.write(handle.getAttributeName(att)+",");
+            }
+            fw.write(handle.getAttributeName(att)+"\n");
+            for(int row=0, col; row<handle.getNumRows(); row++){
+                for(col=0; col<handle.getNumColumns()-1; col++){
+                    fw.write(handle.getValue(row,col)+",");
+                }
+                fw.write(handle.getValue(row,col)+"\n");
+            }
+            fw.close();
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     public void initialsizeExportData(){
         ARXLattice.ARXNode node = result.getGlobalOptimum();
@@ -636,7 +670,4 @@ class Table3Model extends AbstractTableModel{
                 this.fireTableStructureChanged();
             }
     }
-
-
-
 }

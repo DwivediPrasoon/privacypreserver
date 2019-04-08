@@ -2,8 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9a68e5-0158-44fe-9ce6-512108e5a9c5" name="Default Changelist" comment="Heirarchies version 0.1">
+      <change afterPath="$PROJECT_DIR$/src/org/gui/pp/CompareWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gui/pp/CompareWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gui/pp/UploadDataWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gui/pp/UploadDataWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/ARXMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/CSVFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/CSVFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/MyModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/MyModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/Table3Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/Table3Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/WelcomeScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/WelcomeScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/WelcomeScreen$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/WelcomeScreen$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/WelcomeScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/WelcomeScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/wekaWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/wekaWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/wekaWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/wekaWindow$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/wekaWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/gui/pp/wekaWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/pp/Main/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/pp/Main/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/pp/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PrivacyPreserver/org/pp/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/gui/pp/wekaWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/gui/pp/wekaWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/pp/Logic/AnalyticsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/pp/Logic/AnalyticsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/pp/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/pp/Main/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,25 +49,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/gui/pp/wekaWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+            <state relative-caret-position="-430">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1415#1416#0" expanded="true" />
-                <element signature="e#1454#1455#0" expanded="true" />
+                <element signature="e#1615#1616#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/weka/gui/explorer/ClassifierPanel.java">
+        <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
+            <state relative-caret-position="295">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9510">
+              <caret line="672" selection-start-line="672" selection-end-line="672" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/gui/pp/CompareWindow.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/gui/pp/CompareWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,14 +113,17 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>result</find>
-      <find>start</find>
       <find>getclassifier</find>
+      <find>start</find>
+      <find>crossvalidation</find>
+      <find>validation</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/Data</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -67,7 +134,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/org/gui/pp/test.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/abc.form" />
-        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.form" />
         <option value="$PROJECT_DIR$/src/org/weka/attributeSelection/ASEvaluation.java" />
         <option value="$PROJECT_DIR$/src/org/weka/classifiers/functions/GaussianProcesses.java" />
@@ -76,12 +142,20 @@
         <option value="$PROJECT_DIR$/src/org/weka/core/expressionlanguage/parser/Scanner.java" />
         <option value="$PROJECT_DIR$/src/org/weka/core/json/JSONNode.java" />
         <option value="$PROJECT_DIR$/src/weka/core/json/JSONNode.java" />
-        <option value="$PROJECT_DIR$/src/weka/gui/explorer/ClassifierPanel.java" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java" />
-        <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/wekaWindow.form" />
         <option value="$PROJECT_DIR$/src/org/pp/Logic/AnalyticsModel.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/UploadDataWindow.form" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/UploadDataWindow.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java" />
+        <option value="$PROJECT_DIR$/src/org/pp/Main/Main.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.form" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/CompareWindow.form" />
         <option value="$PROJECT_DIR$/src/org/gui/pp/wekaWindow.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/ARXMain.java" />
+        <option value="$PROJECT_DIR$/src/weka/gui/explorer/ClassifierPanel.java" />
+        <option value="$PROJECT_DIR$/src/org/gui/pp/CompareWindow.java" />
       </list>
     </option>
   </component>
@@ -96,6 +170,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,21 +188,22 @@
               <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="weka" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="weka" type="462c0819:PsiDirectoryNode" />
-              <item name="classifiers" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="pp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
               <item name="privacypreserver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="weka" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="pp" type="462c0819:PsiDirectoryNode" />
+              <item name="CompareWindow" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="privacypreserver" type="b2602c69:ProjectViewProjectNode" />
@@ -136,8 +213,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,8 +312,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="677" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.23942599" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49856734" visible="true" weight="0.24320242" />
       <window_info id="Structure" order="1" sideWeight="0.50143266" side_tool="true" weight="0.22583081" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -246,7 +322,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.23760684" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924472" visible="true" weight="0.3008547" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39971346" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -269,29 +345,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Heirarchies version 0.1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/test.form" />
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/abc.form" />
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/abc.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXWelcome.form" />
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXWelcome.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/swing/event/TableModelListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/swing/table/AbstractTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="295" column="60" selection-start-line="295" selection-start-column="60" selection-end-line="295" selection-end-column="60" />
-          <folding>
-            <element signature="e#5610#5611#0" expanded="true" />
-            <element signature="e#5669#5670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/weka.jar!/weka/gui/explorer/ClassifierPanel.class" />
     <entry file="file://$PROJECT_DIR$/src/weka/gui/WekaFileChooser.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -352,20 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/javax/swing/JTabbedPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/pp/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -376,45 +419,6 @@
           <folding>
             <element signature="e#15431#15432#0" expanded="true" />
             <element signature="e#15454#15455#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/weka/gui/explorer/Explorer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="187" column="21" selection-start-line="187" selection-start-column="21" selection-end-line="187" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="27" lean-forward="true" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="26" column="33" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1296#1686#0" expanded="true" />
-            <element signature="e#1685#1686#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -454,22 +458,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weka/gui/GenericObjectEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2163">
-          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/gui/pp/wekaWindow.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/weka/classifiers/Classifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-346">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weka/classifiers/CheckClassifier.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -482,13 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/weka/classifiers/AbstractClassifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5280">
-          <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
         </state>
       </provider>
     </entry>
@@ -534,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weka/gui/explorer/ClassifierPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="183" column="32" selection-start-line="183" selection-start-column="32" selection-end-line="183" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/weka/classifiers/evaluation/ConfusionMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -562,14 +538,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/wekaWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/UploadDataWindow.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/UploadDataWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+        <state relative-caret-position="354">
+          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/gui/explorer/PreprocessPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14416">
+          <caret line="1471" column="14" selection-start-line="1471" selection-start-column="14" selection-end-line="1471" selection-end-column="14" />
+          <folding>
+            <element signature="e#13528#13529#0" expanded="true" />
+            <element signature="e#13565#13566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/gui/explorer/Explorer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/DataPreprocessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/pp/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/classifiers/Classifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/core/converters/ConverterUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="105" column="11" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/CompareWindow.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/experiment/CrossValidationResultProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/gui/GenericObjectEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5561">
+          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/classifiers/AbstractClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1441">
+          <caret line="135" column="56" selection-start-line="135" selection-start-column="46" selection-end-line="135" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/core/Defaults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weka/gui/explorer/ClassifierPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="405" column="75" selection-start-line="405" selection-start-column="75" selection-end-line="405" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/wekaWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/WelcomeWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/ARXMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9510">
+          <caret line="672" selection-start-line="672" selection-end-line="672" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/gui/pp/CompareWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
