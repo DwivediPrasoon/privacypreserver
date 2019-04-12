@@ -1,7 +1,6 @@
 <component name="libraryTable">
   <library name="PrivacyPreserver">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/arx-3.7.1-gtk-64.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/arpack_combined.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/arx-3.7.1-gtk-64.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/bounce.jar!/" />
@@ -13,10 +12,10 @@
       <root url="jar://$PROJECT_DIR$/resources/JFlex.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/junit.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/mtj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/jfreechart-1.0.19.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/arx-3.7.1-gtk-64.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/arx-3.7.1-gtk-64.jar!/" />
       <root url="jar://$PROJECT_DIR$/resources/bounce-src.jar!/" />
     </SOURCES>

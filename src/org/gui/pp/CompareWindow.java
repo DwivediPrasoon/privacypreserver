@@ -1,14 +1,11 @@
 package org.gui.pp;
 
-import smile.validation.CrossValidation;
 import weka.classifiers.AbstractClassifier;
 import weka.classifiers.Classifier;
-import weka.classifiers.CostMatrix;
 import weka.classifiers.Evaluation;
 import weka.core.Debug;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils;
-import weka.experiment.CrossValidationResultProducer;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -84,8 +81,8 @@ public class CompareWindow extends JFrame{
             Evaluation eval2 = new Evaluation(instDS1);
             eval2.crossValidateModel(class2, instDS2, 10,new Debug.Random(1));
 
-            before.setText(class1+"\n"+eval1.toSummaryString());
-            after.setText(class2+"\n"+eval2.toSummaryString());
+            before.setText(class1+"\n"+eval1.toSummaryString()+"\n"+eval1.toMatrixString());
+            after.setText(class2+"\n"+eval2.toSummaryString()+"\n"+eval1.toMatrixString());
 
 
 

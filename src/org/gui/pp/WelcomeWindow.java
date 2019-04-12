@@ -9,8 +9,10 @@ public class WelcomeWindow extends JFrame{
     private JPanel root;
     private JButton openARXWindowButton;
     private JButton compareButton;
+    private JButton openWekaWindowButton1;
     JFrame wekaWindow;
     JFrame arxWindow;
+    JFrame wekaWindow2;
     JFrame compareWindow;
 
     public WelcomeWindow() {
@@ -38,6 +40,14 @@ public class WelcomeWindow extends JFrame{
                 if(compareWindow == null)
                     compareWindow = new CompareWindow();
                 compareWindow.setVisible(true);
+            }
+        });
+        openWekaWindowButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(wekaWindow2 == null)
+                    wekaWindow2 = new wekaWindow();
+                wekaWindow2.setVisible(true);
             }
         });
     }

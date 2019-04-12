@@ -1,5 +1,6 @@
 package org.gui.pp;
 
+import org.apache.hadoop.record.compiler.JFile;
 import org.deidentifier.arx.*;
 import org.deidentifier.arx.criteria.DistinctLDiversity;
 import org.deidentifier.arx.criteria.EntropyLDiversity;
@@ -54,7 +55,8 @@ public class ARXMain extends JFrame{
     private JButton exportToCSVButton;
     private JButton retryWithSomeOtherButton;
     private JButton goToExportDataButton;
-                    JFileChooser fc;
+    private JButton browseButton1;
+    JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
     HashMap<String,String> attributeType;
@@ -62,6 +64,7 @@ public class ARXMain extends JFrame{
     HashMap<String, ArrayList<String[]>> attributeHeirarchyMap;
     Table3Model tm = null;
     File source = null;
+    File destination = null;
     ARXConfiguration config;
     ARXResult result;
     Data data;
@@ -233,6 +236,19 @@ public class ARXMain extends JFrame{
                 exportDataToCSV();
             }
         });
+        browseButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                int res = fc.showOpenDialog(tabbedPane1);
+                if(res == JFileChooser.APPROVE_OPTION){
+                    destination = fc.getCurrentDirectory();
+
+                    exportToCSVButton.setEnabled(true);
+                }
+                fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            }
+        });
     }
 
     public void setColumnColor(JTable table){
@@ -269,7 +285,7 @@ public class ARXMain extends JFrame{
     public void exportDataToCSV(){
         try {
             System.out.println(source.getName());
-            File newFile = new File("/Users/iiitb/Documents/privacypreserver/Data/"+source.getName());
+            File newFile = new File(destination.getAbsolutePath()+"/Anonymized_"+source.getName());
             DataHandle handle = result.getOutput();
             FileWriter fw = new FileWriter(newFile);
             int att;

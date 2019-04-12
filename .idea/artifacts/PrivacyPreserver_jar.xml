@@ -3,10 +3,17 @@
     <output-path>$PROJECT_DIR$/out/artifacts/PrivacyPreserver_jar</output-path>
     <root id="archive" name="PrivacyPreserver.jar">
       <element id="module-output" name="PrivacyPreserver" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/jgoodies-forms-1.8.0-sources.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/jgoodies-forms-1.8.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/weka.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/arx-3.7.1-gtk-64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/arpack_combined.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/arx-3.7.1-gtk-64.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/bounce.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/commons-compress-1.18.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/java-cup.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/jclipboardhelper-0.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/jfilechooser-bookmarks-0.1.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/JFlex.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/junit.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/resources/mtj.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
