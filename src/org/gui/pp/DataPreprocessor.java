@@ -1,8 +1,7 @@
 package org.gui.pp;
 
 
-import sun.awt.AWTIcon32_java_icon16_png;
-import weka.classifiers.Classifier;
+
 import weka.gui.ResultHistoryPanel;
 import weka.gui.explorer.ClassifierPanel;
 import weka.gui.explorer.Explorer;

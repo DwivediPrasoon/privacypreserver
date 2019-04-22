@@ -5,12 +5,14 @@ import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.core.Debug;
 import weka.core.Instances;
+import weka.core.converters.CSVLoader;
 import weka.core.converters.ConverterUtils;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.regex.Pattern;
 
 public class CompareWindow extends JFrame{
     private JTextArea before;
@@ -19,6 +21,7 @@ public class CompareWindow extends JFrame{
     private JButton browseUnAnonymizedFileButton;
     private JButton checkResultsButton;
     private JPanel root;
+    private JComboBox delimiterBox;
     File fileBefore = null, fileAfter = null;
 
 
@@ -58,20 +61,24 @@ public class CompareWindow extends JFrame{
 
 
     void initializeResults(){
-        AbstractClassifier ac = wekaWindow.abc;
-
+        AbstractClassifier modelUnAnonymized = WelcomeWindow.current.getWekaBefore().getCurrentModel();
+        AbstractClassifier modelAnonymized = WelcomeWindow.current.getWekaAfter().getCurrentModel();
         try {
-            ConverterUtils.DataSource ds1 = new ConverterUtils.DataSource(fileBefore.getAbsolutePath());
-            ConverterUtils.DataSource ds2 = new ConverterUtils.DataSource(fileAfter.getAbsolutePath());
-            Instances instDS1 = ds1.getDataSet();
+
+            CSVLoader loader = new CSVLoader();
+            loader.setSource(fileBefore);
+            loader.setFieldSeparator(Pattern.quote(delimiterBox.getSelectedItem().toString()));
+
+            Instances instDS1 = loader.getDataSet();
             instDS1.setClassIndex(instDS1.numAttributes()-1);
-            Instances instDS2 = ds2.getDataSet();
+            loader.setSource(fileAfter);
+            Instances instDS2 = loader.getDataSet();
             instDS2.setClassIndex(instDS2.numAttributes()-1);
 
             //Prepare Classifiers
-            Classifier class1 =  AbstractClassifier.forName(ac.getClass().toString().split(" ")[1], ac.getOptions());
+            Classifier class1 =  AbstractClassifier.forName(modelUnAnonymized.getClass().toString().split(" ")[1], modelUnAnonymized.getOptions());
             class1.buildClassifier(instDS1);
-            Classifier class2 =  AbstractClassifier.forName(ac.getClass().toString().split(" ")[1], ac.getOptions());
+            Classifier class2 =  AbstractClassifier.forName(modelAnonymized.getClass().toString().split(" ")[1], modelUnAnonymized.getOptions());
             class2.buildClassifier(instDS2);
 
 

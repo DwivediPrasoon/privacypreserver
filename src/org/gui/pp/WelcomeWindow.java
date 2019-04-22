@@ -10,12 +10,14 @@ public class WelcomeWindow extends JFrame{
     private JButton openARXWindowButton;
     private JButton compareButton;
     private JButton openWekaWindowButton1;
-    JFrame wekaWindow;
+    wekaWindow wekaWindow;
     JFrame arxWindow;
-    JFrame wekaWindow2;
+    wekaWindow wekaWindow2;
     JFrame compareWindow;
+    static WelcomeWindow current;
 
     public WelcomeWindow() {
+        current = this;
         add(root);
         setSize(1000,1000);
         openWekaWindowButton.addActionListener(new ActionListener() {
@@ -51,4 +53,14 @@ public class WelcomeWindow extends JFrame{
             }
         });
     }
+
+    public wekaWindow getWekaBefore(){
+        return wekaWindow;
+    }
+
+    public wekaWindow getWekaAfter(){
+        return wekaWindow2;
+    }
+
+
 }

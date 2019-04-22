@@ -17,7 +17,7 @@ public class wekaWindow extends JFrame {
     private JButton addModel;
     private JPanel root;
     Explorer explorer;
-    public static AbstractClassifier abc;
+    public AbstractClassifier currentModel;
 
     public wekaWindow(){
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -62,11 +62,15 @@ public class wekaWindow extends JFrame {
         if(explorerTab.getSelectedComponent().getClass().equals(new weka.gui.explorer.ClassifierPanel().getClass())){
             ClassifierPanel c = (ClassifierPanel) explorerTab.getSelectedComponent();
             AbstractClassifier cp = (AbstractClassifier) c.getClassifier();
-            abc = cp;
+            currentModel = cp;
             System.out.println(cp.getCapabilities());
             for(String x: cp.getOptions())
                 System.out.println(x);
         }
+    }
+
+    public AbstractClassifier getCurrentModel(){
+        return currentModel;
     }
 
 

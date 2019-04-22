@@ -20,6 +20,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.nio.charset.Charset;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class ARXMain extends JFrame{
 
@@ -399,7 +400,9 @@ public class ARXMain extends JFrame{
         for(int columnNumber = 0; columnNumber < attributeList.length; columnNumber++ ){
             for(int rowNumber = 0; rowNumber < dataRows.size(); rowNumber++){
                 if(attributeDomain.containsKey(attributeList[columnNumber])){
+
                     attributeDomain.get(attributeList[columnNumber]).add(dataRows.get(rowNumber)[columnNumber]);
+
                 }
                 else{
                     attributeDomain.put(attributeList[columnNumber], new HashSet<>());
@@ -527,7 +530,10 @@ class CSVFile {
             int count = 0;
             while (brd.ready()) {
                 String st = brd.readLine();
-                OneRow = st.split(dilimiter);
+                OneRow = st.split(Pattern.quote(dilimiter));
+//                for(String x:OneRow)
+//                    System.out.print(x+" ");
+//                System.out.print("\n");
                 Rs.add(OneRow);
                 count++;
                 //System.out.println(Arrays.toString(OneRow));

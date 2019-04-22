@@ -75,6 +75,7 @@
                   <model>
                     <item value=";"/>
                     <item value=","/>
+                    <item value="|"/>
                   </model>
                 </properties>
               </component>
