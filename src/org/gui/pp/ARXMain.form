@@ -63,7 +63,9 @@
                 <children>
                   <component id="a9735" class="javax.swing.JTable" binding="table1" default-binding="true">
                     <constraints/>
-                    <properties/>
+                    <properties>
+                      <autoResizeMode value="0"/>
+                    </properties>
                   </component>
                 </children>
               </scrollpane>
@@ -97,15 +99,19 @@
                   <text value="Next"/>
                 </properties>
               </component>
-              <component id="b58a0" class="javax.swing.JTable" binding="table2" default-binding="true">
+              <scrollpane id="3c040">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                    <preferred-size width="1000" height="500"/>
-                    <maximum-size width="1000" height="500"/>
-                  </grid>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
-              </component>
+                <border type="none"/>
+                <children>
+                  <component id="b58a0" class="javax.swing.JTable" binding="table2" default-binding="true">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
             </children>
           </grid>
           <grid id="c50c5" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -537,7 +543,9 @@
                     <children>
                       <component id="4d39d" class="javax.swing.JTable" binding="oldTable">
                         <constraints/>
-                        <properties/>
+                        <properties>
+                          <autoResizeMode value="0"/>
+                        </properties>
                       </component>
                     </children>
                   </scrollpane>
@@ -550,7 +558,9 @@
                     <children>
                       <component id="75807" class="javax.swing.JTable" binding="resultTable">
                         <constraints/>
-                        <properties/>
+                        <properties>
+                          <autoResizeMode value="0"/>
+                        </properties>
                       </component>
                     </children>
                   </scrollpane>
@@ -631,7 +641,7 @@
                   <editable value="false"/>
                 </properties>
               </component>
-              <grid id="f75fd" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="f75fd" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -641,7 +651,7 @@
                 <children>
                   <component id="17f2f" class="javax.swing.JButton" binding="exportToCSVButton" default-binding="true">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <enabled value="false"/>
@@ -656,8 +666,35 @@
                       <text value="Browse"/>
                     </properties>
                   </component>
+                  <component id="d35a0" class="javax.swing.JComboBox" binding="chooseDelimiterToExport">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <model>
+                        <item value=","/>
+                        <item value=";"/>
+                        <item value="|"/>
+                      </model>
+                    </properties>
+                  </component>
                 </children>
               </grid>
+              <scrollpane id="afb9f">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="d0756" class="javax.swing.JTextArea" binding="summaryTextField">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
             </children>
           </grid>
         </children>

@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="PrivacyPreserver:jar">
+  <artifact type="jar" build-on-make="true" name="PrivacyPreserver:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/PrivacyPreserver_jar</output-path>
     <root id="archive" name="PrivacyPreserver.jar">
       <element id="module-output" name="PrivacyPreserver" />

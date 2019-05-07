@@ -6,6 +6,7 @@ import org.deidentifier.arx.criteria.DistinctLDiversity;
 import org.deidentifier.arx.criteria.EntropyLDiversity;
 import org.deidentifier.arx.criteria.KAnonymity;
 import org.deidentifier.arx.criteria.RecursiveCLDiversity;
+import org.deidentifier.arx.risk.RiskModelAttributes;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -14,10 +15,7 @@ import javax.swing.table.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -57,6 +55,9 @@ public class ARXMain extends JFrame{
     private JButton retryWithSomeOtherButton;
     private JButton goToExportDataButton;
     private JButton browseButton1;
+    private JComboBox chooseDelimiterToExport;
+    private JTextArea summaryTextField;
+    private JTextField summaryTextfield;
     JFileChooser fc;
     String[] attributeList;
     HashMap<String,String> attributeSensitivity;
@@ -287,21 +288,26 @@ public class ARXMain extends JFrame{
         try {
             System.out.println(source.getName());
             File newFile = new File(destination.getAbsolutePath()+"/Anonymized_"+source.getName());
+            newFile.createNewFile();
+            System.out.println(newFile);
             DataHandle handle = result.getOutput();
             FileWriter fw = new FileWriter(newFile);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String delimiter = chooseDelimiterToExport.getSelectedItem().toString();
             int att;
             for(att=0; att<handle.getNumColumns()-1; att++){
-                fw.write(handle.getAttributeName(att)+",");
+                bw.write(handle.getAttributeName(att)+delimiter+" ");
             }
-            fw.write(handle.getAttributeName(att)+"\n");
+            bw.write(handle.getAttributeName(att)+"\n");
             for(int row=0, col; row<handle.getNumRows(); row++){
                 for(col=0; col<handle.getNumColumns()-1; col++){
-                    fw.write(handle.getValue(row,col)+",");
+                    bw.write(handle.getValue(row,col)+delimiter+" ");
                 }
-                fw.write(handle.getValue(row,col)+"\n");
+                bw.write(handle.getValue(row,col)+"\n");
             }
+            bw.close();
             fw.close();
-
+            JOptionPane.showMessageDialog(null, "Data Exported");
         }
         catch (Exception e){
             e.printStackTrace();
@@ -313,6 +319,14 @@ public class ARXMain extends JFrame{
         ARXLattice.ARXNode node = result.getGlobalOptimum();
         minInfoLossScore.setText(node.getLowestScore().toString());
         maxInfoLossScore.setText(node.getHighestScore().toString());
+        // Define the population
+        ARXPopulationModel population = ARXPopulationModel.create(ARXPopulationModel.Region.INDIA);
+
+        String[] t = result.getOutput().getStatistics().getFrequencyDistribution(0,true).values;
+        String tx = "";
+        for(String x:t)
+            tx += x+"\n";
+        summaryTextField.setText(tx);
     }
 
     public void populateTable2(){
